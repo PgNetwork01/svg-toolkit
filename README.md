@@ -64,6 +64,7 @@ npm run watch
 
 ## 🏗️ Project Structure
 
+```
 ├── public/ # Static assets
 │ ├── utils/ # Utility functions
 │ └── input.css # Tailwind CSS input
@@ -76,6 +77,7 @@ npm run watch
 ├── popup.html # Extension popup
 ├── welcome.html # Welcome page
 └── styles.css # Core styles
+```
 
 
 ## 🤝 Contributing

@@ -1,0 +1,63 @@
+{
+  "manifest_version": 3,
+  "name": "SVG Toolkit",
+  "version": "1.0.0",
+  "description": "Easily copy SVG elements from any website and convert it to TSX",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "contextMenus"
+  ],
+  "action": {
+    "default_title": "SVG Toolkit",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "public/icon16.png",
+      "32": "public/icon32.png",
+      "48": "public/icon48.png",
+      "128": "public/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "public/icon16.png",
+    "32": "public/icon32.png",
+    "48": "public/icon48.png",
+    "128": "public/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "dist/output.css", "styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "type": "module"
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Open Copy SVG"
+    },
+    "copy_selected": {
+      "suggested_key": {
+        "default": "Alt+C"
+      },
+      "description": "Copy Selected SVG"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# CopySVG Pro
+# SVG Toolkit - Chrome Extension
 
 <div align="center">
   <img src="public/icon128.png" alt="CopySVG Pro Logo" width="128" height="128">

@@ -42,7 +42,7 @@
 ### Clone the repository
 
 ```bash
-git clone [https://github.com/vxsahu/copysvg-pro.git](https://github.com/vxsahu/svg-toolkit.git)
+git clone https://github.com/vxsahu/svg-toolkit.git
 ```
 
 ###Install dependencies
